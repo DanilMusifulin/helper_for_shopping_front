@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интеллектуальный помощник для покупок</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Начальный экран с выбором: регистрация, вход, гость -->
+    <div class="start-screen">
+        <button id="register-btn">Регистрация</button>
+        <button id="login-btn">Вход</button>
+        <button id="guest-btn">Зайти как гость</button>
+    </div>
+
+    <!-- Основной экран, скрыт по умолчанию -->
+    <div class="main-screen" style="display: none;">
+        <!-- Чат-бот -->
+        <div class="chat">
+            <div class="messages"></div>
+            <input type="textarea" id="message-input" placeholder="Напишите запрос..."></textare>
+            <button id="send-btn">Отправить</button>
+        </div>
+
+        <!-- Корзина -->
+        <div class="cart">
+            <h2 style="
+                margin-top: 0px;
+                margin-bottom: 0px;
+            ">Корзина</h2>
+            <div class="cart-items"></div>
+            <p style="
+                margin-top: 0px;
+                margin-bottom: 0px;
+            ">Общая цена: <span id="total-price">0</span> руб.</p>
+        </div>
+
+        <!-- Иконка профиля -->
+        <div class="profile-icon">👤</div>
+
+        <!-- Меню профиля, скрыто по умолчанию -->
+        <div class="profile-menu" style="display: none;">
+            <button id="profile-btn">Мой профиль</button>
+            <button id="history-btn">История корзины</button>
+            <button id="favorites-btn">Избранные товары</button>
+            <button id="logout-btn">Выйти из профиля</button>
+        </div>
+    </div>
+
+    <!-- Подключение JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
